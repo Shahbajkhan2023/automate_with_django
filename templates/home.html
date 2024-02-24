@@ -2,6 +2,7 @@
 
 {% block content %}
   <div class="container" style="padding: 50px;">
+      {% if user.is_authenticated %}
     <h2 class="text-center">Automate The Boring Stuff With Django</h2>
     <div class="row pt-5">
         <!-- Import data -->
@@ -89,5 +90,20 @@
             </a>
         </div>
     </div>
+      {% else %}
+
+      <div class="home-info">
+          <h2 class="text-center">Automate the Boring Staff with Django</h2>
+          <p class="lead text-center text-muted">
+              Automate the Boring Stuff with Django" is a hypothetical project title that suggests using the Django web framework to automate mundane tasks. Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+              In this project, one could develop web applications using Django to automate repetitive tasks such as data entry, file management, email notifications, scheduling, and more. The goal would be to streamline workflows and save time by leveraging Django's powerful features for web development and automation.
+          </p>
+          <div style="display: flex; justify-content: center">
+              <a href="{% url 'login' %}" class="btn btn-primary">LOGIN</a>
+               &nbsp<a href="{% url 'register' %}" class="btn btn-success">REGISTER</a>
+
+          </div>
+      </div>
+      {% endif %}
 </div>
 {% endblock %}
