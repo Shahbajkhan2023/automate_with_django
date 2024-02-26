@@ -6,6 +6,7 @@ from django.conf import settings
 from .models import Subscriber
 from .tasks import send_email_task
 
+
 def send_email(request):
     if request.method == 'POST':
         email_form = EmailForm(request.POST, request.FILES)
