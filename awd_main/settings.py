@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool) # True or False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -119,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -176,3 +176,6 @@ CKEDITOR_CONFIGS = {
 
     },
 }
+
+CSRF_TRUSTED_ORIGINS = ['https://9a7c-2409-40c4-1d-7b48-74c5-1899-d32d-8c02.ngrok-free.app']
+BASE_URL = 'https://9a7c-2409-40c4-1d-7b48-74c5-1899-d32d-8c02.ngrok-free.app'
